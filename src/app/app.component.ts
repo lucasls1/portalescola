@@ -14,6 +14,9 @@ export class AppComponent implements OnInit {
   escolas: Escola[];
   //selectedHero: Hero;
 
+  lat: number = -15.790427;
+  lng: number = -47.881995;
+
   constructor(private escolaService: EscolaService) { }
 
   getEscolas(): void {
