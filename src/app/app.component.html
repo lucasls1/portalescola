@@ -1,28 +1,116 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Olá!
+   <!-- navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Portal Escola</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Mapa</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </h1>
-  <h2>Escolas</h2>
+  <h2>
+   <!-- recepção -->
+    <header class="masthead">
+      <div class="container">
+        <img class="img-fluid" src="img\es.png" alt="">
+        <div class="intro-text">
+          <span class="name">Bem-vindo</span>
+          <hr class="star-light">
+          <span class="skills">Portal Escola - Faça sua Busca - Fique Informado</span>
+        </div>
+      </div>
+    </header>
+</h2>
+<h3>
+<!-- Descrição -->
+    <section class="success" id="about">
+      <div class="container">
+        <h2 class="text-center">Informações</h2>
+        <hr class="star-light">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p>Use a pesquisa para obter informações sobre Professores, Locação, situação funcional.</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p>ATENÇÃO: As informações disponíveis nesta consulta referem-se aos Professores ativos. Não estão incluídos na consulta dados sobre Professores aposentados, pensionistas ou instituidores de pensão, salvo em caso de estarem na ativa em razão de exercício de um segundo cargo público, de acordo com as previsões legais.</p>
+          </div>
+		  <div class="col-lg-4 ml-auto">
+            <p>Os dados têm origem no Sistema (Siape), no Portal Transparência do GDF.
+			Assim, orientamos que, caso seja identificada alguma inconsistência em sua ficha cadastral, entre em contato, em seu órgão de lotação ou de exercício, com o responsável pelo cadastro de informações de pessoal</p>
+          </div>
+          <div class="col-lg-8 mx-auto text-center">
+          </div>
+        </div>
+      </div>
+    </section>
+
+</h3>
+<h4>
+<!-- Portfolio Grid Section -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="text-center">Buscar</h2>
+        <hr class="star-primary">
+        <div class="center">
+	
+   
+    <form>
+      <fieldset>
+        <label>
+          Cidades
+        </label>
+        <select id="myCity" name="myCity" onchange="changeMap(this.value)">
+          <option value="None">Selecione a Cidade</option>
+          <option value="Gama">Gama</option>
+          <option value="Taguatinga">Taguatinga</option>
+          <option value="Ceilandia">Ceilandia</option>
+        </select>
+      </fieldset>
+    </form>
+      
+        </div>
+      </div>
+    </section>
+
+</h4>
   <ul class="escolas">
-    <li *ngFor="let escola of escolas">
-      <b>{{ escola.lotacao }}</b>
-    </li>
+   
       <agm-map [latitude]="lat" [longitude]="lng">
 	  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 	  <agm-marker *ngFor="let escola of escolas" [latitude]="escola.lati" [longitude]="escola.longi"></agm-marker>
       </agm-map>
   </ul>
+<h5>
+ <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+                                   
+          </div>
+        </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Portal Escola 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</h5>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
